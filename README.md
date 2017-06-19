@@ -1,4 +1,4 @@
-# Creacore Ruleset for PHP-CS-Fixer
+# Creacore Ruleset for PHP_CodeSniffer
 
 Creacore ruleset, combination of PSR-2 and Allman indent style
 
