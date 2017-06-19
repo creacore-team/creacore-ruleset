@@ -1,0 +1,13 @@
+{
+    "name": "creacore-team/creacore-ruleset",
+    "description": "Creacore ruleset, combination of PSR-2 and Allman indent style",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Smeets",
+            "email": "nicolas@creacore.be"
+        }
+    ],
+    "require": {}
+}

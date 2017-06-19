@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="CREACORE">
+    <description>Creacore Ruleset based on PSR2 but disable same line bracket.</description>
+    <rule ref="PSR2">
+        <exclude name="Squiz.ControlStructures.ControlSignature" />
+    </rule>
+</ruleset>
