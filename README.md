@@ -16,7 +16,7 @@ composer require creacore-team/creacore-ruleset
 Usage:
 
 ```
-$ vendor/bin/phpcs path/to/your/code
+$ vendor/bin/phpcs --standard=CREACORE path/to/your/code
 ```
 
 
