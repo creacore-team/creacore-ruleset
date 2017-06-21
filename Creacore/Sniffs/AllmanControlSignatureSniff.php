@@ -93,6 +93,24 @@ class AllmanSniffsControlStructuresControlSignatureSniff implements Sniff
             }
         }
 
+        // New line after nonParenthesis
+        $nonParenthesis_token = array(
+            T_TRY => T_TRY,
+            T_DO => T_DO,
+            T_ELSE => T_ELSE
+        );
+        if(isset($nonParenthesis_token[$tokens[$stackPtr]['code']]) && $tokens[$tokens[$stackPtr]['scope_opener']]["line"] != $tokens[$stackPtr]["line"]+1)
+        {
+            $error = 'Opener must be on the next line';
+            $data  = array();
+
+            $fix = $phpcsFile->addFixableError($error, $stackPtr, 'OpenerNextLine', $data);
+            if($fix === true)
+            {
+                $phpcsFile->fixer->addContent($stackPtr, "\n");
+            }
+        }
+
         // Single space after closing parenthesis.
         if(isset($tokens[$stackPtr]['parenthesis_closer']) && isset($tokens[$stackPtr]['scope_opener']))
         {
